@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Crop Prediction</title>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial;
+  padding: 0px;
+  background: black;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 0px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 12px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: black;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://nystudio107-ems2qegf7x6qiqq.netdna-ssl.com/img/blog/_1200x675_crop_center-center_82_line/craft-cms-custom-field-leveraging-platform-2.jpg.webp");
+
+  /* Add the blur effect */
+  filter: blur(0px);
+
+
+  /* Full height */
+  height: 16%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+
+</style>
+<script type="text/javascript">
+function func(a,b){
+var x=document.getElementById('add').innerHTML;
+document.getElementById('add').innerHTML=x+"<tr><td>"+a+"</td><td>"+b+"</td></tr>";
+}
+</script>
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h1>F4</h1>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="Blog.html">Blog</a>
+  <a href="#">Identify</a>
+  <a href="predict.html">Predict</a>
+  <a href="cart.html">Cart</a>
+  <a href="form.html" style="float:right">Contact</a>
+  <a href="login.html" style="float:right">Login</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+    <title>crop identification</title>
+</head>
+
+<body>
+    <h2> Enter the following values to predict the Best Crop</h2>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="/predict1"method="post">
+    <input type="text" name="Nitrogen" placeholder="Nitrogen" required="required" />
+    <input type="text" name="Phosphorus" placeholder="Phosphorus" required="required" /><br><br>
+    <input type="text" name="Potassium" placeholder="Potassium" required="required" />
+    <input type="text" name="Temparature" placeholder="Temparature" required="required" /><br><br>
+    <input type="text" name="Humidity" placeholder="Humidity" required="required" />
+    <input type="text" name="PH" placeholder="PH" required="required" /><br><br>
+    <input type="text" name="Rainfall" placeholder="Rainfall" required="required" /><br><br><br>
+
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+
+   <br><p style="color:black"><b>
+{{pred}}
+   <b></p><br>
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+<div class="rightcolumn">
+
+
+    <div class="card" style="color:black">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><a href="#"><img src="https://th.thgim.com/news/national/ohx1mu/article33576861.ece/ALTERNATES/FREE_660/farmers" width=70% height=auto></a><p>Farmers’ protest | Farmers to attend ninth round of talks with government without ‘much hope’</p></div>
+
+      <div class="fakeimg"><a href="#"><img src="https://static-r1.asianetnews.com/images/01etpythxwtt9zrcr7vsaa4h1t/whatsapp-image-2020-12-29-at-15-12-41-jpeg.jpg" width=70% height=auto></a><p>Success story: Giving up lucrative job, Amit starts vermicompost business, earns handsomely...</p></div>
+
+      <div class="fakeimg"><a href="#"><img src="https://5.imimg.com/data5/XK/EI/HS/SELLER-43781183/vermicompost-jpg-500x500.jpg" width=70% height=auto></a><p>Global Vermicompost Market 2020 Industry Outlook, Business Strategies and COVID-19 Impact Analysis 2025</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <a href="https://www.instagram.com/emmawatson/"><img src="https://th.bing.com/th/id/OIP.HQVvwtaJOCtX_37thjJ09QHaHa?w=191&h=191&c=7&o=5&dpr=1.25&pid=1.7" width='80px' height='80px'></a>
+      <a href='https://twitter.com/emmawatson'><img src='https://th.bing.com/th/id/OIP.FCKMemzqNplY37Jwi0Yk3AHaGl?w=215&h=191&c=7&o=5&dpr=1.25&pid=1.7' width='80px' height='80px'></a>
+      <a href="https://www.facebook.com/emmawatson"><img src='https://th.bing.com/th/id/OIP.mB4MD6GfezQVUf1s6FbvrwHaHa?w=178&h=180&c=7&o=5&dpr=1.25&pid=1.7' width='80px' height='80px'></a>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+    <h2>About Us</h2>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+</div>
+</body>
+
+</html>
