@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+
+const kColors = [
+  Colors.green,
+  Colors.blueGrey,
+  Colors.yellow,
+  Colors.black,
+  Colors.lightBlue,
+  Colors.teal,
+  Colors.tealAccent,
+  Colors.purple,
+  Colors.pinkAccent,
+  Colors.indigoAccent,
+  Colors.cyan,
+  Colors.amber,
+  Colors.deepOrange,
+  Colors.limeAccent,
+  Colors.blueAccent,
+  Colors.deepPurpleAccent,
+  Colors.lightGreenAccent,
+  Colors.brown,
+  Colors.deepOrangeAccent,
+  Colors.purpleAccent,
+  Colors.redAccent,
+  Colors.yellowAccent,
+  Colors.orangeAccent,
+  Colors.greenAccent,
+];
